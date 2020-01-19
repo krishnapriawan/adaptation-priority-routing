@@ -19,3 +19,4 @@ log/*
 /app/Config.py
 bin/*
 lib/*
+epos/datasets/*
