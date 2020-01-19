@@ -7,8 +7,8 @@ from app.routing.CustomRouter import CustomRouter
 from app.network.Network import Network
 from app.simulation.Simulation import Simulation
 from colorama import Fore
-from sumo import SUMOConnector, SUMODependency
-import Config
+from app.sumo import SUMOConnector, SUMODependency
+from app import Config
 import traci, sys
 import random
 
