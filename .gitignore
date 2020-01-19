@@ -17,3 +17,5 @@ log/*
 /output/plans_1549129968/
 /results/*
 /app/Config.py
+bin/*
+lib/*
