@@ -36,10 +36,10 @@ class Network(object):
     def __applyNetwork(cls, net):
         """ internal method for applying the values of a SUMO map """
         cls.nodeIds = map(lambda x: x.getID(), net.getNodes())  # type: list[str]
-        cls.edgeIds = map(lambda x: x.getID(), net.getEdges(withInternal=False))  # type: list[str]
+        cls.edgeIds = map(lambda x: x.getID(), net.getEdges())  # type: list[str]
         cls.nodes = net.getNodes()
-        cls.edges = net.getEdges(withInternal=False)
-        cls.passenger_edges = [e for e in net.getEdges(withInternal=False) if e.allows("passenger")]
+        cls.edges = net.getEdges()
+        cls.passenger_edges = [e for e in net.getEdges() if e.allows("passenger")]
         cls.routingEdges = map(lambda x: RoutingEdge(x), cls.passenger_edges)
 
     @classmethod
